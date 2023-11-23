@@ -1,0 +1,4 @@
+@use "sass:math";
+@function calc-font-size($px) {
+  @return percentage(calc($px/16));
+}

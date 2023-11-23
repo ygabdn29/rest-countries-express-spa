@@ -1,0 +1,142 @@
+@use "../abstract/mixins" as mixins;
+
+.countries {
+  &__search-filter-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 3.2rem 7.2rem;
+  }
+
+  &__search-container {
+  }
+
+  &__search-from {
+    position: relative;
+  }
+
+  // &__search-button {
+  //   position: absolute;
+  //   border: none;
+  //   outline: none;
+  //   padding: 2rem;
+  //   border-radius: 5px;
+  //   background-color: var(--clr-element);
+  // }
+
+  &__search-icon {
+    font-size: 1.4rem;
+  }
+
+  &__search-input {
+    width: 50rem;
+    padding: 2.4rem;
+    outline: none;
+    font-size: 1.4rem;
+    color: var(--clr-input);
+    background-color: var(--clr-element);
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0.5rem 2rem 0.5rem rgba(20, 20, 20, 0.1);
+
+    &::placeholder {
+      color: var(--clr-input);
+      font-size: 1.4rem;
+    }
+  }
+
+  &__filter-container {
+  }
+
+  &__filter-form {
+    display: flex;
+    justify-content: end;
+  }
+
+  &__filter-select {
+    outline: none;
+    border: none;
+    padding: 2.4rem;
+    box-shadow: 0 0.5rem 2rem 0.5rem rgba(20, 20, 20, 0.1);
+  }
+
+  &__filter-option {
+    outline: none;
+    border: none;
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 7.2rem;
+
+    padding: 3.2rem 7.2rem;
+  }
+
+  &__card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: var(--clr-element);
+    box-shadow: 0 0.5rem 2rem 0.5rem rgba(20, 20, 20, 0.1);
+  }
+
+  &__country-detail-link {
+    &:link,
+    &:visited {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+    }
+  }
+
+  &__img-container {
+    width: 27rem;
+    height: 16rem;
+  }
+
+  &__img-flag {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__details-text-box {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    padding: 2.4rem 2.4rem 4.8rem 2.4rem;
+  }
+
+  &__name {
+    font-size: 1.6rem;
+    font-weight: 800;
+    margin-bottom: 0.8rem;
+  }
+
+  &__detail-type {
+    font-weight: 600;
+  }
+
+  &__population,
+  &__region,
+  &__capital {
+    font-size: 1.4rem;
+    font-weight: 300;
+  }
+
+  &__region {
+  }
+
+  &__capital {
+  }
+}

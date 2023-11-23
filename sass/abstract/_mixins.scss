@@ -1,0 +1,8 @@
+@use "./functions" as functions;
+$mobile: 400px;
+
+@mixin responsive($breakpoint) {
+  @media (max-width: calc(($breakpoint / 16px) * 1em)) {
+    @content;
+  }
+}
